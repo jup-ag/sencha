@@ -17,7 +17,8 @@ pub struct NewFactory<'info> {
             base.key().as_ref()
         ],
         bump,
-        payer = payer
+        payer = payer,
+        space = 201
     )]
     pub factory: Box<Account<'info, Factory>>,
 
@@ -46,7 +47,8 @@ pub struct NewSwap<'info> {
             token_1.mint.key().to_bytes().as_ref()
         ],
         bump,
-        payer = payer
+        payer = payer,
+        space = 674
     )]
     pub swap: Box<Account<'info, SwapInfo>>,
 
@@ -88,7 +90,8 @@ pub struct NewSwapMeta<'info> {
             swap.index.to_le_bytes().as_ref()
         ],
         bump,
-        payer = payer
+        payer = payer,
+        space = 113
     )]
     pub swap_meta: Box<Account<'info, SwapMeta>>,
 
